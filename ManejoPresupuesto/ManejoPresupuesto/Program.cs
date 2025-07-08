@@ -1,3 +1,5 @@
+using ManejoPresupuesto.Servicios;
+
 namespace ManejoPresupuesto
 {
     public class Program
@@ -8,6 +10,8 @@ namespace ManejoPresupuesto
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddTransient<IRepositorioTiposCuentas, RepositorioTiposCuentas>();
+            builder.Services.AddTransient<IServicioUsuarios, ServicioUsuarios>();
 
             var app = builder.Build();
 
