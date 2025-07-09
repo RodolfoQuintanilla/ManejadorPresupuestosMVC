@@ -1,0 +1,14 @@
+@model TipoCuenta
+
+@{
+    ViewData["Title"] = "Borrar";
+}
+
+<h3 class="mb-3">¿Desea borrar el Tipo de Cuenta @Model.Nombre?</h3>
+
+
+<form asp-action="BorrarTipoCuenta">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Borrar" class="btn btn-danger" /> |
+    <a asp-action="Index">Volver</a>
+</form>

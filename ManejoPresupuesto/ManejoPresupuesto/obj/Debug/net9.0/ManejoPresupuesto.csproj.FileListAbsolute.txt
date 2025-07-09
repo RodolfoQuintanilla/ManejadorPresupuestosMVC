@@ -145,3 +145,17 @@ C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresup
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\ManejoPresupuesto.csproj.AssemblyReference.cache
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\ManejoPr.43BBE251.Up2Date
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\aimgxiwxkn-nt7ilhvj58.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\mqf1w0megw-72bi5bmqwh.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\pnoj8hoi9x-0i3buxo5is.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\ibhm3jeadj-2jvjnlz339.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\dy73fysym5-nr5zftr3vh.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\qxg23mku9p-3de1nhugwi.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\fpzgcrfxdh-xlfsqd798a.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\pi43t8z6fe-if5udyg90s.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\laiy9s4bjf-xmuqfn50qh.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\eozbaz0g9n-0avc6en0p3.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\23mzhe679l-s0k6h7qcks.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\jnzfm4uc9f-8kjarcocxj.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\xxdc1zyl7u-mtq9ih5pls.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\2jco18p5pq-qaocao8vyd.gz
