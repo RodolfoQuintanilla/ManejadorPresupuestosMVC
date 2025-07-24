@@ -45,7 +45,7 @@ namespace ManejoPresupuesto.Servicios
                                                 commandType: System.Data.CommandType.StoredProcedure);
             /*     ($@"INSERT INTO TiposCuentas (Nombre,UsuarioId,Orden) 
                     VALUES (@Nombre, @UsuarioId, 0);
-                    SELECT SCOPE_IDENTITY()", tipoCuenta); */
+                    SELECT SCOPE_IDENTITY()", tipoCuenta);==> SCOPE_IDENTITY() trae el nombre del registro recien creado  */
             tipoCuenta.Id = id;
         }
 
@@ -54,6 +54,8 @@ namespace ManejoPresupuesto.Servicios
         public async Task<bool> Existe(string nombre, int usuarioId)
         {
             using var connection = new SqlConnection(connectionString);
+            //QueryFirstOrDefaultAsync ==> devuelve el primer registro que cumpla con la condicion
+            //QueryFirstOrDefaultAsync devuelve un int, si el nombre no existe devuelve 0, si existe devuelve 1
             var existe = await connection.QueryFirstOrDefaultAsync<int>(
                                     @"SELECT 1
                                     FROM TiposCuentas

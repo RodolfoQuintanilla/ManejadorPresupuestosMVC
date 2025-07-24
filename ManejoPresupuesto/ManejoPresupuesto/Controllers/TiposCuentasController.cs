@@ -1,3 +1,4 @@
+//se crea el controlador 1
 
 using Dapper;
 using ManejoPresupuesto.Models;
@@ -22,12 +23,12 @@ namespace ManejoPresupuesto.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var usuarioId = servicioUsuarios.OptenerUsuarioId();
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
             var tiposCuentas = await repositorioTiposCuentas.Obtener(usuarioId);
             return View(tiposCuentas);
         }
 
-
+        //se crea la vista de la creacion de un tipo de cuenta 2
         public IActionResult Crear()
         {
             return View();
@@ -43,7 +44,7 @@ namespace ManejoPresupuesto.Controllers
             }
 
             //Se modificara
-            tiposCuenta.UsuarioId = servicioUsuarios.OptenerUsuarioId();
+            tiposCuenta.UsuarioId = servicioUsuarios.ObtenerUsuarioId();
 
             var yaExisteTipoCuenta =
             await repositorioTiposCuentas.Existe(tiposCuenta.Nombre, tiposCuenta.UsuarioId);
@@ -65,7 +66,7 @@ namespace ManejoPresupuesto.Controllers
         [HttpGet]
         public async Task<IActionResult> Editar(int id)
         {
-            var usuarioId = servicioUsuarios.OptenerUsuarioId();
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
             var tipoCuenta = await repositorioTiposCuentas.ObtenerPorId(id, usuarioId);
 
             if (tipoCuenta is null)
@@ -78,7 +79,7 @@ namespace ManejoPresupuesto.Controllers
         [HttpPost]
         public async Task<IActionResult> Editar(TipoCuenta tipoCuenta)
         {
-            var usuarioId = servicioUsuarios.OptenerUsuarioId();
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
             var tipoCuentaExiste = await repositorioTiposCuentas.ObtenerPorId(tipoCuenta.Id, usuarioId);
             if (tipoCuentaExiste is null)
             {
@@ -91,10 +92,8 @@ namespace ManejoPresupuesto.Controllers
 
         public async Task<IActionResult> Borrar(int id)
         {
-            var usuarioId = servicioUsuarios.OptenerUsuarioId();
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
             var tipoCuenta = await repositorioTiposCuentas.ObtenerPorId(id, usuarioId);
-
-
             if (tipoCuenta is null)
             {
                 return RedirectToAction("NoEncontrado", "Home");
@@ -105,7 +104,7 @@ namespace ManejoPresupuesto.Controllers
         [HttpPost]
         public async Task<IActionResult> BorrarTipoCuenta(int id)
         {
-            var usuarioId = servicioUsuarios.OptenerUsuarioId();
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
             var tipoCuenta = await repositorioTiposCuentas.ObtenerPorId(id, usuarioId);
 
 
@@ -133,10 +132,10 @@ namespace ManejoPresupuesto.Controllers
         }
 
 
-        [HttpPost]
+       [HttpPost]
         public async Task<IActionResult> Ordenar([FromBody] int[] ids)
         {
-            var usuarioId = servicioUsuarios.OptenerUsuarioId();
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
             var tiposCuentas = await repositorioTiposCuentas.Obtener(usuarioId);
             var idsTiposCuentas = tiposCuentas.Select(x => x.Id);
 
@@ -147,10 +146,10 @@ namespace ManejoPresupuesto.Controllers
                 return Forbid();
             }
 
-            var tipoCuentasOrdenados = ids.Select((valor, indice) =>
-            new TipoCuenta() { Id = valor, Order = indice + 1 }).AsEnumerable();
+            var tiposCuentasOrdenados = ids.Select((valor, indice) =>
+                new TipoCuenta() { Id = valor, Orden= indice + 1 }).AsEnumerable();
 
-            await repositorioTiposCuentas.Ordenar(tipoCuentasOrdenados);
+            await repositorioTiposCuentas.Ordenar(tiposCuentasOrdenados);
 
             return Ok();
         }

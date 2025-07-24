@@ -1,4 +1,4 @@
-
+//Crea modelo de la tabla TipoCuenta
 
 using System.ComponentModel.DataAnnotations;
 using ManejoPresupuesto.Validaciones;
@@ -15,10 +15,9 @@ namespace ManejoPresupuesto.Models
         [Remote(action:"VerificarExisteTipoCuenta", controller:"TiposCuentas")]  /* ==> verificar con js */
         public string Nombre { get; set; }
         public int UsuarioId { get; set; }
-        public int Order { get; set; }
+         public int Orden { get; set; }
 
-        /* 
-        -----------------Ejemplo  de validacion personalizada------------------
+        /* -----------------Ejemplo  de validacion personalizada------------------
 
          public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
          {
