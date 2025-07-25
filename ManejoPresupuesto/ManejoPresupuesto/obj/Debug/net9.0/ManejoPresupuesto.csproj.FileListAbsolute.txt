@@ -84,8 +84,6 @@ C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresup
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\8cqz6qav7m-muycvpuwrr.gz
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\ch48w23j8d-87fc7y1x7t.gz
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\3cl66t5cbc-mlv21k5csn.gz
-C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\d5gepkikfp-9dypikwo71.gz
-C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\9w4vefbcx1-9dypikwo71.gz
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\staticwebassets.build.json.cache
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\staticwebassets.development.json
@@ -159,3 +157,8 @@ C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresup
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\xxdc1zyl7u-mtq9ih5pls.gz
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\2jco18p5pq-qaocao8vyd.gz
 C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\aimgxiwxkn-ay93driln8.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\scopedcss\Views\Cuentas\Index.cshtml.rz.scp.css
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\d5gepkikfp-dosxk7fb0o.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\obj\Debug\net9.0\compressed\9w4vefbcx1-dosxk7fb0o.gz
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\rqm\OneDrive\Documentos\programer\ManejadorPresupuestosMVC\ManejoPresupuesto\ManejoPresupuesto\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

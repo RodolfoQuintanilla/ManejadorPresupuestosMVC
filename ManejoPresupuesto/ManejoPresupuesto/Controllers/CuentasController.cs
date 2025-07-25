@@ -1,4 +1,5 @@
 
+using AutoMapper;
 using ManejoPresupuesto.Models;
 using ManejoPresupuesto.Servicios;
 using Microsoft.AspNetCore.Mvc;
@@ -12,12 +13,14 @@ namespace ManejoPresupuesto.Controllers
         private readonly IRepositorioTiposCuentas repositorioTiposCuentas;
         private readonly IServicioUsuarios servicioUsuarios;
         private readonly IRepositorioCuentas repositorioCuentas;
+        private readonly IMapper mapper;
 
-        public CuentasController(IRepositorioTiposCuentas repositorioTiposCuentas, IServicioUsuarios servicioUsuarios, IRepositorioCuentas repositorioCuentas)
+        public CuentasController(IRepositorioTiposCuentas repositorioTiposCuentas, IServicioUsuarios servicioUsuarios, IRepositorioCuentas repositorioCuentas, IMapper mapper )
         {
             this.repositorioTiposCuentas = repositorioTiposCuentas;
             this.servicioUsuarios = servicioUsuarios;
             this.repositorioCuentas = repositorioCuentas;
+            this.mapper = mapper;
         }
 
         public async Task<IActionResult> Index()
@@ -65,6 +68,52 @@ namespace ManejoPresupuesto.Controllers
                 return View(cuenta);
             }
             await repositorioCuentas.Craer(cuenta);
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> Editar(int id)
+        {
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
+            var cuenta = await repositorioCuentas.ObtenetPorId(id, usuarioId);
+
+            if (cuenta is null)
+            {
+                RedirectToAction("NoEncontrado", "Home");
+            }
+
+            var modelo =mapper.Map<CuentaCreacionViewModel>(cuenta);
+            
+             /* new CuentaCreacionViewModel()
+          {
+              Id = cuenta.Id,
+              Nombre = cuenta.Nombre,
+              TipoCuentaId = cuenta.TipoCuentaId,
+              Descripcion = cuenta.Descripcion,
+              Balance = cuenta.Balance
+          }; */
+            modelo.TiposCuentas = await ObtenerTiposCuentas(usuarioId);
+            return View(modelo);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Editar(CuentaCreacionViewModel cuentaEditar)
+        {
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
+            var cuenta = await repositorioCuentas.ObtenetPorId(cuentaEditar.Id, usuarioId);
+
+            if (cuenta is null)
+            {
+                RedirectToAction("NoEncontrado", "Home");
+            }
+
+            var tiposCuentas = await repositorioCuentas.ObtenetPorId(cuentaEditar.TipoCuentaId, usuarioId);
+
+            if (tiposCuentas is null)
+            {
+                RedirectToAction("NoEncontrado", "Home");
+            }
+
+            await repositorioCuentas.Actualizar(cuentaEditar);
             return RedirectToAction("Index");
         }
 
