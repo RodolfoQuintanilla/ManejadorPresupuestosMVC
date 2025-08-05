@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ManejoPresupuesto")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+867451dd385d102813a1604e4fbd1d8e96458ace")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc4904f83d980aee8f21d89587b2e1bc99bc0978")]
 [assembly: System.Reflection.AssemblyProductAttribute("ManejoPresupuesto")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ManejoPresupuesto")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

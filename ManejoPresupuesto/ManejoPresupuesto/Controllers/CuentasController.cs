@@ -15,7 +15,7 @@ namespace ManejoPresupuesto.Controllers
         private readonly IRepositorioCuentas repositorioCuentas;
         private readonly IMapper mapper;
 
-        public CuentasController(IRepositorioTiposCuentas repositorioTiposCuentas, IServicioUsuarios servicioUsuarios, IRepositorioCuentas repositorioCuentas, IMapper mapper )
+        public CuentasController(IRepositorioTiposCuentas repositorioTiposCuentas, IServicioUsuarios servicioUsuarios, IRepositorioCuentas repositorioCuentas, IMapper mapper)
         {
             this.repositorioTiposCuentas = repositorioTiposCuentas;
             this.servicioUsuarios = servicioUsuarios;
@@ -81,16 +81,16 @@ namespace ManejoPresupuesto.Controllers
                 RedirectToAction("NoEncontrado", "Home");
             }
 
-            var modelo =mapper.Map<CuentaCreacionViewModel>(cuenta);
-            
-             /* new CuentaCreacionViewModel()
-          {
-              Id = cuenta.Id,
-              Nombre = cuenta.Nombre,
-              TipoCuentaId = cuenta.TipoCuentaId,
-              Descripcion = cuenta.Descripcion,
-              Balance = cuenta.Balance
-          }; */
+            var modelo = mapper.Map<CuentaCreacionViewModel>(cuenta);
+
+            /* new CuentaCreacionViewModel()
+         {
+             Id = cuenta.Id,
+             Nombre = cuenta.Nombre,
+             TipoCuentaId = cuenta.TipoCuentaId,
+             Descripcion = cuenta.Descripcion,
+             Balance = cuenta.Balance
+         }; */
             modelo.TiposCuentas = await ObtenerTiposCuentas(usuarioId);
             return View(modelo);
         }
@@ -114,6 +114,35 @@ namespace ManejoPresupuesto.Controllers
             }
 
             await repositorioCuentas.Actualizar(cuentaEditar);
+            return RedirectToAction("Index");
+        }
+
+          [HttpGet]
+        public async Task<IActionResult> Borrar(int id)
+        {
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
+            var cuenta = await repositorioCuentas.ObtenetPorId(id, usuarioId);
+
+            if (cuenta is null)
+            {
+                return RedirectToAction("NoEncontrado", "Home");
+            }
+
+            return View(cuenta);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> BorrarCuenta(int id)
+        {
+            var usuarioId = servicioUsuarios.ObtenerUsuarioId();
+            var cuenta = await repositorioCuentas.ObtenetPorId(id, usuarioId);
+
+            if (cuenta is null)
+            {
+                return RedirectToAction("NoEncontrado", "Home");
+            }
+
+            await repositorioCuentas.Borrar(id);
             return RedirectToAction("Index");
         }
 

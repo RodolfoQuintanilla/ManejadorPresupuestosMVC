@@ -9,7 +9,7 @@ namespace ManejoPresupuesto.Servicios
     {
         public AutoMapperProfiles()
         {
-            CreateMap<Cuenta, CuentaCreacionViewModel>();
+            CreateMap<Cuenta, CuentaCreacionViewModel>().ReverseMap();
         }
     }
 }
